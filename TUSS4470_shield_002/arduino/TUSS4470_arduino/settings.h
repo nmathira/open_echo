@@ -3,18 +3,18 @@
 // ---------------------- DRIVE FREQUENCY SETTINGS ----------------------
 // Sets the output frequency of the ultrasonic transducer
 // Uses DRIVE_FREQUENCY directly for R4, uses divider for R3
-#define DRIVE_FREQUENCY 40000
+#define DRIVE_FREQUENCY 200000
 const int DRIVE_FREQUENCY_TIMER_DIVIDER = (16000000 / (2 * DRIVE_FREQUENCY)) - 1;
 
 // ---------------------- BANDPASS FILTER SETTINGS ----------------------
 // Sets the digital band-pass filter frequency on the TUSS4470 driver chip
 // This should roughly match the transducer drive frequency
 // For additional register values, see TUSS4470 datasheet, Table 7.1 (pages 17–18)
-#define FILTER_FREQUENCY_REGISTER 0x00 // 40 kHz
+//#define FILTER_FREQUENCY_REGISTER 0x00 // 40 kHz
 // #define FILTER_FREQUENCY_REGISTER 0x09 // 68 kHz
 // #define FILTER_FREQUENCY_REGISTER 0x10 // 100 kHz
 // #define FILTER_FREQUENCY_REGISTER 0x18 // 151 kHz
-// #define FILTER_FREQUENCY_REGISTER 0x1E // 200 kHz
+ #define FILTER_FREQUENCY_REGISTER 0x1E // 200 kHz
 
 // Number of ADC samples to take per measurement cycle
 // Each sample takes approximately 13.2 microseconds
