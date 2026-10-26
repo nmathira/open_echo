@@ -884,7 +884,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
 
     # Apply the dark theme
-    qdarktheme.setup_theme("dark")
+    #qdarktheme.setup_theme("dark")
     window = WaterfallApp()
 
     # window.showFullScreen()
